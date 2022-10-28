@@ -1,0 +1,144 @@
+*{
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+
+
+}
+body{
+    font-family: Helvetica;
+    color: seashell;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+/* Header */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+    background-color: black;
+    width: 100%;
+    border-bottom: 1px solid seashell;
+    top: 0;
+}
+nav{
+    margin: 10px;
+}
+li{
+    display: inline;
+}
+nav li:not(:last-child){
+    margin-right: 15px;
+}
+nav a{
+    text-decoration: underline;
+    color: seashell;
+    transition: all 1s;
+
+}
+.logo{
+    height: 50px;
+    margin: 10px;
+}
+
+nav a:hover{
+    color: red;
+}
+
+/* PORTADA */
+
+.portada{
+    background-image: url("/Users/melldok/Desktop/Codecademy/Projects/Tea cozy/img/img-mission-background.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 700px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 40px;
+    margin-top: 70px;
+    width: 95vw;
+
+}
+.banda{
+    position: absolute;
+    background-color: black;
+    width: 100%;
+}
+
+/* OPCIONES DE COMIDA */
+
+.options{
+    margin-top: 40px;
+    width: 1000px;
+    text-align: center;
+    line-height: 30px;
+}
+.fotos{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.foto{
+    height: 200px;
+    width: 300px;
+}
+
+/* LUGARES */
+
+.lugares{
+    margin-top: 60px;
+    width: 95vw;
+    height: 500px;
+    background-image: url("/Users/melldok/Desktop/Codecademy/Projects/Tea cozy/img/img-locations-background.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap;
+
+}
+.lugares h2{
+    position: absolute;
+    top: 40px;
+}
+
+.cuadroNegro{
+    background-color: black;
+    width: 300px;
+    height: 300px;
+}
+
+.cuadroNegro h3{
+    margin: 25px 0;
+}
+.cuadroNegro p{
+    line-height: 60px;
+}
+
+footer{
+    margin-top: 40px;
+    line-height: 50px;
+    position: relative;
+}
+.final{
+    margin-bottom: 50px;
+    margin-left: 20px;
+}
+.finalo{
+    width: 100%;
+}
