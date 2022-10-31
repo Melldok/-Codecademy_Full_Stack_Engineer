@@ -1,18 +1,22 @@
 
+
+
+let authorName = document.querySelector("h3");
+let quoteP = document.querySelector("p");
+let categories = document.querySelector(".categories");
+let randQuote = document.querySelector(".newQuote")
+
 function randomNumber(num) {
     // Generates a random number from 0 -> num - 1
     return Math.floor(Math.random() * num)
   }
 
 
-
-
-
 const famousQuotes = [
     // Array of nested objects that represent quote categories, authors and quotes
     {
         // Each object has a category, several authors and quotes from those authors
-        category : motivational,
+        category : "motivational",
         authors : [
             // Authors is formed by an array of objects 
             {
@@ -36,8 +40,8 @@ const famousQuotes = [
                 quote: "It always seems impossible until it's done."
             },
             {
-                author: "Life is 10% what happens to you and 90% how you react to it.",
-                quote: "Charles R.Swindoll"
+                author: "Charles R.Swindoll",
+                quote: "Life is 10% what happens to you and 90% how you react to it."
             },
             {
                 author: "Aristotle",
@@ -91,7 +95,7 @@ const famousQuotes = [
         ],
     },
     {
-        category : inspirational,
+        category : "inspirational",
         authors : [
             {
                 author: "Francis of Assisi",
@@ -168,7 +172,7 @@ const famousQuotes = [
         ],
     },
     {
-        category : hard_pills,
+        category : "hard_pills",
         authors : [
             {
                 author: "Seneca",
@@ -252,14 +256,90 @@ const famousQuotes = [
             }
         ],
     }
-]
+];
+
+
+function totallyRandom(){
+    
+// It will choose a random object from the Quotes array
+
+let randObj = famousQuotes[randomNumber(famousQuotes.length)];
+
+let random = randObj.authors[randomNumber(randObj.authors.length)];
+
+authorName.innerHTML = random.author;
+quoteP.innerHTML = random.quote;
+
+
+
+// random is the simplified version of famousQuotes[randomNumber(famousQuotes.length)].authors[randomNumber(famousQuotes[randomNumber(famousQuotes.length)].authors.length)]
+
+return random
+
+}
+
+let today = new Date();
+
+
+// Specify which day of the week are we currently on 
+function getToday(){
+    
+    let day = today.getDay() //It will return a number 1-7 depending of the day of the week
+
+    //transforming that number into actual days
+
+    switch (day) {
+        case 1:
+            return "Monday"
+            break;
+        case 2:
+            return "Tuesday"
+            break;
+        case 3:
+            return "Wednesday"
+            break;
+        case 4:
+            return "Thursday"
+            break;
+        case 5:
+            return "Friday"
+            break;
+        case 6:
+            return "Saturday"
+            break;
+        case 7:
+            return "Sunday"
+            break;
+        default:
+            break;
+            
+
+    }
+    
+    return day
+}
+//Select day from document
+let day = document.querySelector(".day");
+// Change HTML so it reflects current dat
+day.innerHTML = getToday()
+
+
+// Modal for categories
+let list = document.querySelector("ul")
+
+randQuote.addEventListener("click", totallyRandom)
+categories.addEventListener("click", () => {
+    list.classList.toggle("visible");
+} )
+
+// New random quote every refresh
+totallyRandom()
 
 
 
 
 
-
-
+console.log(getToday())
 
 
 
