@@ -104,10 +104,82 @@ button:hover{
 
 
 .buttons{
-    position: relative;
-    bottom: 0;
-    right: 0;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+
 }
 
 
+
+button{
+
+    background-color: #ffffff;
+    color: black;
+    border: 1px solid black
+
+}
+
+button:hover {
+
+    background-color: #000000;
+    color: white;
+
+}
+
+button,.links {
+
+    padding: 12px;
+
+    font-size: 1em;
+
+    font-family: futura Md BT;
+
+    border: none;
+
+    outline: none;
+
+    width:200px;
+
+    color: black;
+
+    transition: 0.3s;
+
+}
+
+.list {
+
+    position: absolute;
+
+    transform: scaleY(0);
+
+    transform-origin: top;
+
+    transition: 0.3s;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+.newlist {
+
+    transform: scaleY(1);
+
+}
+
+.links {
+
+    background-color: white;
+
+}
+
+.links:hover {
+
+    background-color: black;
+
+    transform: scale(1.1);
+
+}
 
