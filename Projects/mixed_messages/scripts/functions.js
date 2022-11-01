@@ -258,7 +258,7 @@ const famousQuotes = [
     }
 ];
 
-
+// Function to totally randomize the quote
 function totallyRandom(){
     
 // It will choose a random object from the Quotes array
@@ -277,6 +277,30 @@ quoteP.innerHTML = random.quote;
 return random
 
 }
+
+//Random quote depending of the category selected
+
+function partiallyRandom(category){
+
+    let num = 0
+
+    if(category === "Motivational"){
+        num = 0;
+     }else if(category === "Inspirational"){
+        num = 1;
+     }else if(category === "Hard Pills"){
+        num = 2;
+     }
+
+    let random = famousQuotes[num].authors[randomNumber(famousQuotes[num].authors.length)];
+
+    authorName.innerHTML = random.author;
+    quoteP.innerHTML = random.quote;
+
+  
+
+    return random;
+};
 
 let today = new Date();
 
@@ -317,29 +341,74 @@ function getToday(){
     }
     
     return day
-}
+};
 //Select day from document
 let day = document.querySelector(".day");
 // Change HTML so it reflects current dat
-day.innerHTML = getToday()
+day.innerHTML = getToday();
 
-
-// Modal for categories
-let list = document.querySelector("ul")
-
-randQuote.addEventListener("click", totallyRandom)
-categories.addEventListener("click", () => {
-    list.classList.toggle("visible");
-} )
 
 // New random quote every refresh
 totallyRandom()
 
+// Categories button behavior 
+
+let click = document.querySelector('.categories');
+
+let list = document.querySelector('.list');
+
+let links = document.querySelectorAll(".links")
+
+click.addEventListener("click",()=>{
+
+    list.classList.toggle('newlist');
+
+});
+
+links.forEach(link => {
+    
+    link.addEventListener("click",()=>{
+
+        list.classList.toggle('newlist');
+
+        click.innerHTML = link.innerHTML
+        
+    
+    });
+});
+
+
+// Random quote button behavior
+
+
+randQuote.addEventListener("click", () => {
+
+    if(click.innerHTML == "Categories" || click.innerHTML == "Random" ){
+        totallyRandom()
+    }else if(click.innerHTML == "Motivational"){
+        partiallyRandom(click.innerHTML)
+    }else if(click.innerHTML == "Inspirational"){
+        partiallyRandom(click.innerHTML)
+    }else if(click.innerHTML == "Hard Pills"){
+        partiallyRandom(click.innerHTML)
+    }
+    
+
+})
+
+
+
+categories.addEventListener("click", () => {
+    list.classList.toggle("visible");
+} )
 
 
 
 
-console.log(getToday())
+
+
+
+
 
 
 
