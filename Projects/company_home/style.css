@@ -1,0 +1,533 @@
+
+
+*{
+    font-family: futura-pt, sans-serif;
+    margin: 0;
+    padding: 0;
+  
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+header img{
+    width: 47px;
+    height: 47px;
+}
+
+ul{
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+    margin-left: 10px;
+    color: white;
+    font-size: 20px;
+    line-height: 27px;
+    font-weight: 500px;
+    transition: 0.3s;
+}
+
+a:not(:last-child):hover{
+    color:#FC5209
+}
+
+.click{
+    background-color: #FC5209;
+    border-radius: 1px;
+    padding: 10px;
+}
+
+.click:hover{
+    background-color: #113cb1;
+    color: white;
+}
+
+
+.title_keyboard{
+    text-align: center;
+}
+
+
+h2{
+    color: white;
+    font-weight: 500;
+    font-size: 10vw;
+    line-height: 170px;
+    letter-spacing: -0.1em;
+    margin-top: 100px;
+    margin-bottom: -100px;
+    
+  
+    
+    
+}
+
+.whiteK{
+    width: 45vw;   
+}
+
+
+
+section{
+    height: 100vh;
+    background-color: white;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 0 10%;
+
+}
+
+.presentation{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 2% 10%;
+   
+}
+
+
+
+h3{
+    color: black;
+    font-size: 6.3vw;
+    line-height: 170px;
+    font-weight: 500;
+    letter-spacing: -0.1em;
+    position: absolute;
+    z-index: 2;
+    margin-top: 5%;
+}
+
+.orange{
+    color:#FC5209;
+}
+
+.bar{
+    position: absolute;
+    width: 20%;
+    height: 100vh;
+    background-color: black;
+    right: 9.5%;
+    top: 100vh;
+   
+    
+}
+.bar, .bar div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bar div{
+    margin-top: 60px;
+    text-align: center;
+}
+
+.bar p{
+    color: grey;
+}
+
+.bar img{
+    height: 70px;
+}
+
+.flex{
+    display: flex;
+    margin-top: 20%;
+}
+
+.switch img{
+   
+    height: 400px;
+    width: 350px;
+}
+.flex h4{
+    font-weight: 500;
+    font-size: 5vw;
+    width: 200px;
+    line-height: normal;
+    letter-spacing: -0.07em;
+    margin-top: 90px;
+    margin-bottom: 20px;
+}
+.flex p{
+    color: grey;
+}
+
+.p21{
+    width: 170px;
+    margin-left: 80px;
+}
+
+.keyColor h2{
+    color: black;
+    font-size: 3vw;
+    line-height: normal;
+    margin: 0;
+
+}
+
+.keyColor h2 span{
+    background-color:#FC5209;
+    padding: 0.2vw;
+}
+
+.keyColor p{
+    color: grey;
+    margin-top: 20px;
+}
+
+.keyColor .click{
+    width: 80px;
+    text-align: center;
+    background-color: black;
+    color: #FC5209;
+}
+
+.keyColor .click:hover,.sec3 p:nth-child(2):hover{
+    
+    background-color:#113cb1;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+.keyColor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.keyColor img{
+    height: auto;
+    width: 65%;
+    margin-left: 5%;
+}
+
+
+.sec3{
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.sec3 h2{
+    color: black;
+    letter-spacing: -0.1em;
+    margin-bottom: 0;
+}
+
+.sec3 img{
+    width: 100%;
+}
+
+.sec3 div:nth-child(2){
+  
+    margin-left: 50px;
+    width: 40%;
+    margin-top: 10%;
+}
+
+.sec3 p:nth-child(1){
+   font-size: 3vw;
+   margin-bottom: 10px;
+   line-height: normal;
+   padding-top: 70px;
+   
+}
+
+.sec3 p:nth-child(2){
+    width: 100px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: black;
+    color: #FC5209;
+    
+ }
+
+ .bar:nth-child(1){
+    top: 400vh;
+    left: 9.5%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 1%;
+
+ }
+
+ .bar:nth-child(1) p{
+    
+    font-size: 1.4vw;
+ }
+
+ .sinceLogo{
+    position: absolute;
+    top: 0;
+ }
+
+
+ .sec4 h2{
+    color: black;
+    font-size: 8vw;
+    margin-bottom: 40px;
+ }
+
+ .sec4{
+    padding-left: 40%;
+ }
+
+ .people{
+    display: flex;
+ }
+ .people p{
+    font-size: 2.5vw;
+    color: black;
+ }
+
+ .person:not(:last-child){
+    margin-right: 10px;
+ }
+
+ .person:nth-child(1){
+ 
+    margin-top: 60px;
+ }
+ 
+
+ .person:nth-child(3){
+ 
+    margin-top: -60px;
+ }
+
+
+
+ @media only screen and (max-width: 1200px){
+    /*Tablets [601px -> 1200px]*/
+   
+
+    section{
+        height: 70vh;
+        background-color: white;
+        overflow: hidden;
+        box-sizing: border-box;
+        padding: 0 10%;
+    
+    }
+
+    .bar{
+        display: flex;
+        flex-direction: row;
+        position: initial;
+        width: 100%;
+        margin-top: 60px;
+        padding: 0;
+        height: 10vh;
+     
+    }
+
+    .bar div{
+       
+        margin: 10px;
+        
+    }
+
+    .keyColor{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .keyColor h2{
+        font-size: 6vw;
+    }
+
+    .keyColor img{
+        margin: 0;
+        width: 80vw;
+        margin-top: 40px;
+    }
+
+    .keyColor .click{
+        text-align: center;
+        margin: 0;
+        margin-top: 20px;
+        width: auto;
+    }
+
+    .sec3, .sec3 h2, .sec3 p{
+        margin: 0;
+        
+    }
+
+
+    .sec4{
+        margin: 0;
+        padding: 0 10%;
+        justify-content: center;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .sec4 h2{
+        text-align: center;
+        margin: 0;
+        margin-top: -50px;
+    }
+
+    .people{
+        margin: 0;
+        padding: 0;
+    }
+    .person{
+        margin: 0;
+    }
+
+    .person:nth-child(1),.person:nth-child(3){
+ 
+        margin: 0 ;
+     }
+
+     .person:not(:last-child){
+        margin-right: 10px;
+     }
+
+     .sec4 .flex{
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+     }
+     .person img{
+        height: 22vh;
+     }
+
+     .sec4 .bar{
+        margin: 0;
+        flex-direction: column-reverse;
+        height: 20vh;
+     }
+
+     .sinceLogo{
+        position: initial;
+     }
+
+     .sinceLogo img{
+        margin-top: 20px;
+     }
+
+     
+     
+    
+
+
+
+}
+@media only screen and (max-width: 500px){
+    
+	.presentation a{
+        font-size: 15px;
+        justify-content: center;
+    }
+
+    .switch{
+        display: flex;
+    }
+    .switch img{
+        height: 20vh;
+        width: 15vh;
+    }
+
+    .p21{
+        margin: 40px 20px;
+    }
+
+    section:nth-child(2) .flex{
+        flex-direction: column;
+        margin: 0;
+    }
+
+    section:nth-child(2) h3{
+        margin: 50px 0;
+        position: initial;
+        line-height: normal;
+    }
+
+    section:nth-child(2) h4{
+        
+        margin-top: -30px;
+        position: initial;
+        line-height: 35px;
+        font-size: 50px;
+    }
+
+    section:nth-child(2) .bar div img{
+        
+        height: 30px;
+    }
+
+    section:nth-child(2) .bar div p{
+        
+        font-size: 14px;
+    }
+
+    .sec3{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sec3 h2{
+        line-height: normal;
+    }
+
+    .sec3 div:nth-child(2){
+        margin: 0;
+        width: auto;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .sec3 div:nth-child(2) p{
+        
+        padding-top: 10px;
+        font-size: 20px;
+        width: auto;
+    }
+
+    .sec4 .flex img{
+        height: 17vh;
+    }
+
+    .sec4{
+        justify-content: center;
+    }
+
+    .sec4 .flex{
+        margin-bottom: -20px;
+    }
+
+    .sinceLogo img{
+        height: 50px;
+    }
+   
+    .sec4 .bar p{
+        font-size: 16px;
+      
+    }
+
+    .sec4 .bar p{
+        margin-top: 20px;
+      
+    }
+    .sec4 .bar{
+        margin-top: 20px;
+        height: 45vh;
+    }
+}
+
