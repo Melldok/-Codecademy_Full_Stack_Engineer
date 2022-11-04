@@ -138,4 +138,3 @@ const companies = [...new Set(idInvalidCardCompanies(invalidCards))];
 console.log(companies)
 
 
-
